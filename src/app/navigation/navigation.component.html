@@ -1,0 +1,70 @@
+<div class="main-nav-container" [class.main-nav-is-mobile]="mobileQuery.matches">
+
+  <mat-sidenav-container class="main-sidenav-container" autosize>
+    <mat-sidenav class="sidenav-area" #snav [mode]="'over'">
+      <mat-nav-list>
+
+        <a *ngFor="let link of sideNavLink"
+           mat-list-item
+           [routerLink]="link.url"
+           [class.active-item-link]="selectedPath === link.url"
+           (click)="sideLinkClick()">
+          <mat-icon [class.active-item-icon]="selectedPath === link.url">{{link.icon}}</mat-icon>
+          <span [class.active-item-text]="selectedPath === link.url" class="sidenav-link-title">{{link.title}}</span>
+        </a>
+
+        <div class="">
+          <mat-list>
+            <mat-list-item class="head-inf">Developed By</mat-list-item>
+            <mat-divider></mat-divider>
+            <mat-list-item class="inf">Md Iqbal Hossen</mat-list-item>
+            <mat-list-item class="inf">developer.sazib@gmail.com</mat-list-item>
+          </mat-list>
+        </div>
+      </mat-nav-list>
+    </mat-sidenav>
+
+    <mat-sidenav-content>
+
+      <mat-toolbar class="nav-toolbar">
+        <div class="toggleBtn">
+          <button mat-icon-button (click)="snav.toggle()"><mat-icon>menu</mat-icon></button>
+        </div>
+
+        <div class="container">
+
+          <div fxLayout="row" fxLayoutAlign="space-between center">
+            <div fxFlex="20" class="brand">
+              <h1>My Maps</h1>
+            </div>
+
+            <div fxLayout="row" fxLayoutAlign="end center"  class="custom-nav-link" fxFlex="80">
+
+              <div class="map-search">
+                <div class="search-div" fxFlex>
+                  <div class="search">
+                    <input [(ngModel)]="query" type="text" class="searchTerm" placeholder="What place you looking for?">
+                    <button (click)="places(query)" type="submit" class="searchButton">
+                      <mat-icon>search</mat-icon>
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+      </mat-toolbar>
+
+
+      <!--      ############## Content from here #################-->
+      <main>
+        <div class="my-map" #map ></div>
+<!--        <router-outlet></router-outlet>-->
+      </main>
+
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+</div>

@@ -1,0 +1,39 @@
+//font-family: 'Open Sans', sans-serif;
+//font-family: 'Montserrat', sans-serif;
+//font-family: 'Poppins', sans-serif;
+
+@import '~@angular/material/theming';
+@include mat-core();
+
+@import "custom-mat-color";
+
+// Define the default theme (same as the example above).
+$candy-app-primary: mat-palette($mat-indigo);
+$candy-app-accent:  mat-palette($mat-pink, A200, A100, A400);
+$candy-app-warn:  mat-palette($pick-color-light-sky, 500, A100, A400);
+$candy-app-theme:   mat-light-theme($candy-app-primary, $candy-app-accent, $candy-app-warn);
+
+// Include the default theme styles.
+@include angular-material-theme($candy-app-theme);
+
+
+// #### Alternative Custom Theme Style  ###
+.form-color-theme {
+  $form-primary: mat-palette($mat-blue);
+  $form-accent:  mat-palette($mat-cyan);
+  $form-warn:  mat-palette($mat-red);
+
+  $form-theme: mat-light-theme($form-primary, $form-accent, $form-warn);
+
+  @include angular-material-theme($form-theme);
+}
+
+
+// Define an alternate dark theme.
+//$form-primary: mat-palette($mat-blue);
+//$form-accent:  mat-palette($mat-cyan);
+//$form-warn:    mat-palette($mat-red);
+//$form-theme:   mat-dark-theme($form-primary, $form-accent, $form-warn);
+//.form-color-theme {
+//  @include angular-material-theme($form-theme);
+//}

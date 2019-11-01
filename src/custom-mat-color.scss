@@ -1,0 +1,83 @@
+
+@import '~@angular/material/theming';
+@include mat-core();
+
+// Pickup Custom Color Pallet..
+/* For use in src/lib/core/theming/_palette.scss */
+$md-pick-color: (
+  50 : #f6ece1,
+  100 : #e9cfb4,
+  200 : #daaf83,
+  300 : #cb8f51,
+  400 : #bf772b,
+  500 : #b45f06,
+  600 : #ad5705,
+  700 : #a44d04,
+  800 : #9c4303,
+  900 : #8c3202,
+  A100 : #ffccb8,
+  A200 : #ffa785,
+  A400 : #ff8252,
+  A700 : #ff7039,
+  contrast: (
+    50 : #000000,
+    100 : #000000,
+    200 : #000000,
+    300 : #000000,
+    400 : #000000,
+    500 : #ffffff,
+    600 : #ffffff,
+    700 : #ffffff,
+    800 : #ffffff,
+    900 : #ffffff,
+    A100 : #000000,
+    A200 : #000000,
+    A400 : #000000,
+    A700 : #000000,
+  )
+);
+
+$material-light-sky: (
+  50 : #fdfefe,
+  100 : #fbfcfd,
+  200 : #f9fbfc,
+  300 : #f6f9fa,
+  400 : #f4f7f9,
+  500 : #f2f6f8,
+  600 : #f0f5f7,
+  700 : #eef3f6,
+  800 : #ecf2f5,
+  900 : #e8eff3,
+  A100 : #ffffff,
+  A200 : #ffffff,
+  A400 : #ffffff,
+  A700 : #ffffff,
+  contrast: (
+    50 : #000000,
+    100 : #000000,
+    200 : #000000,
+    300 : #000000,
+    400 : #000000,
+    500 : #ffffff,
+    600 : #ffffff,
+    700 : #ffffff,
+    800 : #ffffff,
+    900 : #ffffff,
+    A100 : #000000,
+    A200 : #000000,
+    A400 : #000000,
+    A700 : #000000,
+  )
+);
+
+
+
+
+$material-red: mat-palette($mat-red);
+$material-light-blue: mat-palette($mat-light-blue);
+$material-brown: mat-palette($mat-brown);
+$material-yellow: mat-palette($mat-yellow);
+$material-orange:  mat-palette($mat-orange);
+$material-green:  mat-palette($mat-green);
+$pick-color-gray:  mat-palette($md-pick-color);
+$pick-color-light-sky:  mat-palette($material-light-sky);

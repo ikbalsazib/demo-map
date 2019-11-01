@@ -1,0 +1,28 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+//font-family: 'Open Sans', sans-serif;
+//font-family: 'Montserrat', sans-serif;
+//font-family: 'Poppins', sans-serif;
+
+// font-family: 'SutonnyMJ', 'arial', sans-serif;
+// font-family: 'Siyamrupali', 'arial', sans-serif;
+
+@font-face {
+  font-family: montserratblack;
+  src: url(assets/fonts/Montserrat-Black.otf) format("opentype");
+}
+
+@font-face {
+  font-family: SutonnyMJ;
+  src: url(assets/fonts/Sutonny-omj.ttf) format("opentype");
+}
+
+@font-face {
+  font-family: Siyamrupali;
+  src: url(assets/fonts/Siyamrupali.ttf) format("opentype");
+}
+
+
